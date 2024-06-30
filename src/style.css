@@ -1,0 +1,79 @@
+/**
+* ! Changing default styles of the browser
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+.nav {
+  color: white;
+  padding: 20px 30px;
+  background-color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.cartAmount {
+  position: absolute;
+  top: -13px;
+  right: -5px;
+  font-size: 15px;
+  background-color: red;
+  padding: 3px;
+  border-radius: 3px;
+  
+}
+.cart {
+  position: relative;
+ background-color: blueviolet;
+ padding: 5px;
+ font-size: 20px;
+}
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-gap: 13px;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 220px);
+  } 
+}
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 220px);
+  } 
+}
+.item  {
+  border: 1px solid #212529;
+  
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px;
+}
+.priceQuantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+}
+
+
+
