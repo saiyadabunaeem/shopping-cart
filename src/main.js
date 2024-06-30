@@ -30,6 +30,7 @@ let shopItemsData = [
   ];
   const shop = document.getElementById('shop');
   const generateShop = ()=> {
+    
     return (shopItemsData.map((item)=>{
         return `<div id='item-id-${item.id}' class="item">
     <img width="220" src="${item.img}" alt="Shirt">
@@ -51,7 +52,7 @@ let shopItemsData = [
     ).join('')
   }
   shop.innerHTML= generateShop();
-  let basket=[];
+  let basket = JSON.parse(localStorage.getItem('data')) || [];
   let increment = (id)=>{ 
     let selectedItem = id;
     
@@ -67,6 +68,7 @@ let shopItemsData = [
     else{
       search.item+=1
     }
+    localStorage.setItem('data', JSON.stringify(basket));
     update(selectedItem.id);
     calculation();
   }
