@@ -30,7 +30,7 @@ const generateCart = ()=>{
               <h4 class="pname">${search.name}</h4>
               <h5 class="pprice">$ ${search.price}</h5>
               </div>
-              <button onclick="empty('${x.id}')" class="x">x</button>
+              <button onclick="empty('${x.id}')" class="x"><i class="bi bi-x-circle"></i></button>
           </div>
           <div class="plus-amount">
                <div class="buttons">

@@ -82,6 +82,7 @@ a {
   display: grid;
   grid-template-columns: repeat(1, 300px);
   justify-content: center;
+  gap: 7px;
 }
 .carts {
   display: flex;
@@ -140,6 +141,7 @@ a {
   border-radius: 3px solid #212529;
   background-color: green;
   color: white;
+  margin-top: 10px;
 }
 
 
