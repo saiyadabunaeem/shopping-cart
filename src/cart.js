@@ -30,7 +30,7 @@ const generateCart = ()=>{
               <h4 class="pname">${search.name}</h4>
               <h5 class="pprice">$ ${search.price}</h5>
               </div>
-              <button onclick="clear('${x.id}')" class="x">x</button>
+              <button onclick="empty('${x.id}')" class="x">x</button>
           </div>
           <div class="plus-amount">
                <div class="buttons">
@@ -50,7 +50,7 @@ const generateCart = ()=>{
         head.innerHTML = ``
         label.innerHTML = `
           <h2>Cart is empty.</h2>
-        <a href="index.html"><button>Back to Home.</button></a>
+          <a href="index.html"><button>Back to Home.</button></a>
         `
 
     }
@@ -121,13 +121,21 @@ const total = ()=>{
 
 }
 total();
-let clear = (id)=>{
-  console.log(id);
-}
+
 const clearCart = ()=>{
   basket = [];
   localStorage.setItem('data', JSON.stringify(basket));
   generateCart();
   calculation()
+
+}
+const empty = (id)=>{
+    basket = basket.filter((x)=>{
+    return x.id !== id
+  });
+  localStorage.setItem('data', JSON.stringify(basket));
+  generateCart();
+  calculation();
+  total()
 
 }

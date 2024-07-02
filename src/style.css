@@ -131,6 +131,16 @@ a {
   background-color: red;
   color: white;
 }
+.label {
+  text-align: center;
+
+}
+.label button {
+  padding: 7px;
+  border-radius: 3px solid #212529;
+  background-color: green;
+  color: white;
+}
 
 
 
